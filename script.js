@@ -1,4 +1,4 @@
-var APIKey = 'f2a1e3b36a5d9371d9cb94a16f70a588';
+var APIKey = '';
 var city = 'stamford';
 
 var getLatLong = 'http://api.openweathermap.org/geo/1.0/direct?q=' + city + '&appid=' + APIKey;
