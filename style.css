@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 6vh;
+    background: linear-gradient(90deg, rgba(200,14,118,1) 0%, rgba(205,54,13,1) 9%, rgba(179,215,10,1) 27%, rgba(42,154,175,0.7203475140056023) 47%, rgba(90,114,154,1) 69%, rgba(208,176,176,1) 100%, rgba(255,0,125,1) 100%);
+    color: white;
+    height: 15vh;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    width: 50vh;
+    font-size: 5vh;
+    
+}
