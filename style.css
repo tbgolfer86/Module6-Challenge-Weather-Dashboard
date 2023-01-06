@@ -15,6 +15,11 @@ h1 {
     height: 15vh;
 }
 
+#emoji {
+    font-size: 10vh;
+    padding: 5px;
+}
+
 .left-column {
     display: flex;
     flex-direction: column;
