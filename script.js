@@ -1,23 +1,28 @@
-var APIKey = '';
-var city = 'stamford';
+var APIKey = '3ca32555d29dc021fe4de0856010f8ea';
+var searchFormEl = document.getElementById('search-box');
+var city = document.getElementById('city').value;
 
-var getLatLong = 'http://api.openweathermap.org/geo/1.0/direct?q=' + city + '&appid=' + APIKey;
-var queryURL = 'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + APIKey;
+function handleSearchFormSubmit(event) {
+  event.preventDefault();
+  var city = document.getElementById('city').value;
+  console.log(city)
 
-fetch(queryURL)
+  searchAPI();
+}
+searchFormEl.addEventListener('submit', handleSearchFormSubmit);
+
+// var cityWeather = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=' + APIKey;
+
+
+function searchAPI() {
+  var latLong = 'http://api.openweathermap.org/geo/1.0/direct?q=' + city + '&appid=' + APIKey;
+
+  fetch(latLong)
   .then(function (response) {
     return response.json();
   })
   .then(function (data) {
-    console.log(data);
-  });
-
-  fetch(getLatLong)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    console.log('Latitude: ' + data[0].lat);
-    console.log('Longitude: ' + data[0].lon);
+    console.log(data)
   });
   
+}
