@@ -6,9 +6,6 @@ header {
     background: linear-gradient(90deg, rgba(200,14,118,1) 0%, rgba(205,54,13,1) 9%, rgba(179,215,10,1) 27%, rgba(42,154,175,0.7203475140056023) 47%, rgba(90,114,154,1) 69%, rgba(208,176,176,1) 100%, rgba(255,0,125,1) 100%);
     height: 100px;
     margin-bottom: 10px;
-    border-bottom-style: solid;
-    border-bottom-color: rgb(20, 8, 82);
-    border-bottom-width: 10px;
 }
 
 h1 {
