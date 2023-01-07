@@ -107,16 +107,6 @@ function getWeatherData(city) {
   })
 }
 
-function handleSearchFormSubmit(event) {
-  event.preventDefault();
-  var city = document.getElementById('city').value;
-  if (city == '') {
-    return;
-  }
-  getWeatherData(city);
-}
-searchFormEl.addEventListener('submit', handleSearchFormSubmit);
-
 function renderSearchButtons() {
   document.getElementById('searched-cities').innerHTML = '';
   
@@ -124,8 +114,10 @@ function renderSearchButtons() {
     var newSearchButton = document.createElement('button');
     newSearchButton.textContent = searchedCity[i];
     newSearchButton.classList.add('button');
-    newSearchButton.addEventListener("click", function(event){
-      console.log(event.target)
+    newSearchButton.addEventListener("click", function(){
+      city = searchedCity[i];
+      
+      getWeatherData(city);
     });
     document.getElementById('searched-cities').appendChild(newSearchButton)
   }
@@ -133,5 +125,12 @@ function renderSearchButtons() {
 
 renderSearchButtons();
 
-  
-  
+function handleSearchFormSubmit(event) {
+  event.preventDefault();
+  var city = document.getElementById('city').value;
+  if (city == '') {
+    return;
+  }
+  getWeatherData(city);
+} 
+searchFormEl.addEventListener('submit', handleSearchFormSubmit);
