@@ -51,8 +51,7 @@ day3Date.textContent = dayjs().add(3, 'Day').format("M/DD/YYYY");
 day4Date.textContent = dayjs().add(4, 'Day').format("M/DD/YYYY");
 day5Date.textContent = dayjs().add(5, 'Day').format("M/DD/YYYY");
 
-function getWeatherData() {
-  var city = document.getElementById('city').value;
+function getWeatherData(city) {
   var latLongURL = 'http://api.openweathermap.org/geo/1.0/direct?q=' + city + '&appid=' + APIKey;
 
   fetch(latLongURL)
@@ -110,8 +109,11 @@ function getWeatherData() {
 
 function handleSearchFormSubmit(event) {
   event.preventDefault();
-
-  getWeatherData();
+  var city = document.getElementById('city').value;
+  if (city == '') {
+    return;
+  }
+  getWeatherData(city);
 }
 searchFormEl.addEventListener('submit', handleSearchFormSubmit);
 
@@ -122,8 +124,8 @@ function renderSearchButtons() {
     var newSearchButton = document.createElement('button');
     newSearchButton.textContent = searchedCity[i];
     newSearchButton.classList.add('button');
-    newSearchButton.addEventListener("click", function(){
-      
+    newSearchButton.addEventListener("click", function(event){
+      console.log(event.target)
     });
     document.getElementById('searched-cities').appendChild(newSearchButton)
   }
