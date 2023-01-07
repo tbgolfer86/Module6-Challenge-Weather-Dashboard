@@ -1,5 +1,6 @@
 var APIKey = '3ca32555d29dc021fe4de0856010f8ea';
 var searchFormEl = document.getElementById('search-box');
+searchedCities = [];
 
 var todaysDate = document.getElementById('todays-date');
 var day1 = document.getElementById('day1');
@@ -35,6 +36,9 @@ function getWeatherData() {
     return response.json(); 
   })
   .then(function(cityWeather) {
+    weather = JSON.stringify(cityWeather);
+    localStorage.setItem('city', weather);
+
     var cityName = document.getElementById('city-name');
     cityName.textContent = " " + cityWeather.city.name;
 
