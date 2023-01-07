@@ -1,12 +1,5 @@
 var APIKey = '3ca32555d29dc021fe4de0856010f8ea';
 var searchFormEl = document.getElementById('search-box');
-var searchedCity = localStorage.getItem('city');
-
-if (!searchedCity) {
-  searchedCity = [];
-} else {
-  searchedCity = JSON.parse(searchedCity);
-}
 
 var cityName = document.getElementById('city-name');
 var todaysDate = document.getElementById('todays-date');
@@ -51,6 +44,24 @@ day3Date.textContent = dayjs().add(3, 'Day').format("M/DD/YYYY");
 day4Date.textContent = dayjs().add(4, 'Day').format("M/DD/YYYY");
 day5Date.textContent = dayjs().add(5, 'Day').format("M/DD/YYYY");
 
+var searchedCity = localStorage.getItem('city');
+
+if (!searchedCity) {
+  searchedCity = [];
+} else {
+  searchedCity = JSON.parse(searchedCity);
+}
+
+function handleSearchFormSubmit(event) {
+  event.preventDefault();
+  var city = document.getElementById('city').value;
+  if (city == '') {
+    return;
+  }
+  getWeatherData(city);
+} 
+searchFormEl.addEventListener('submit', handleSearchFormSubmit);
+
 function getWeatherData(city) {
   var latLongURL = 'http://api.openweathermap.org/geo/1.0/direct?q=' + city + '&appid=' + APIKey;
 
@@ -68,8 +79,11 @@ function getWeatherData(city) {
     return response.json(); 
   })
   .then(function(cityWeather) {
-    searchedCity.push(cityWeather.city.name);
-    localStorage.setItem('city', JSON.stringify(searchedCity));
+    if (searchedCity.includes(cityWeather.city.name) == false) {
+      searchedCity.push(cityWeather.city.name);
+      localStorage.setItem('city', JSON.stringify(searchedCity));
+    }
+    
     renderSearchButtons();
     
     cityName.textContent = " " + cityWeather.city.name;
@@ -125,12 +139,3 @@ function renderSearchButtons() {
 
 renderSearchButtons();
 
-function handleSearchFormSubmit(event) {
-  event.preventDefault();
-  var city = document.getElementById('city').value;
-  if (city == '') {
-    return;
-  }
-  getWeatherData(city);
-} 
-searchFormEl.addEventListener('submit', handleSearchFormSubmit);
