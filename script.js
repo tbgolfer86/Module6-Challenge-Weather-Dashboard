@@ -115,7 +115,6 @@ function handleSearchFormSubmit(event) {
 }
 searchFormEl.addEventListener('submit', handleSearchFormSubmit);
 
-
 function renderSearchButtons() {
   document.getElementById('searched-cities').innerHTML = 'Searched city';
   

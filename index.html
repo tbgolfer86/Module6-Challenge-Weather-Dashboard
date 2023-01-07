@@ -13,65 +13,67 @@
 </header>
 
 <body>
-    <form id="search-box" class="search-box">
-        <label for="search">Search for a city:</label>
-        <input type="text" id="city" name="city">
-        <input type="submit" class="button" value="Search">
-    </form>
+    <div class="page-layout">
+        <div class="left-side">
+            <form class="search-box" id="search-box">
+                <label for="search">Search for a city:</label>
+                <input type="text" id="city" name="city">
+                <input type="submit" class="button" value="Search">
+            </form>
+            <ul>
+                <li id="searched-cities">Searched city</li>
+            </ul>
+        </div>
 
-    <ul>
-        <li id="searched-cities">Searched city</li>
-    </ul>
+        <div class="weather-section">
+            <div class="main-card">
+                <h2><span id="city-name"></span><span id="todays-date"></span></h2>
+                <p>Temp:<span id="current-day-temp"></span></p>
+                <p>Wind:<span id="current-day-wind"></span></p>
+                <p>Humidity:<span id="current-day-humidity"></span></p>
+            </div>
 
-    <div class="main-card">
-        <h2><span id="city-name"></span><span id="todays-date"></span></h2>
-        <p>Temp:<span id="current-day-temp"></span></p>
-        <p>Wind:<span id="current-day-wind"></span></p>
-        <p>Humidity:<span id="current-day-humidity"></span></p>
+            <h3>5-Day Forecast:</h3>
+
+            <div class="five-day">
+                <div class="card">
+                    <p class="date" id="day1"></p>
+                    <p><span id="day1-icon"></span></p>
+                    <p>Temp:<span id="day1-temp"></span></p>
+                    <p>Wind:<span id="day1-wind"></span></p>
+                    <p>Humidity:<span id="day1-humidity"></span></p>
+                </div>
+                <div class="card">
+                    <p class="date" id="day2"></p>
+                    <p><span id="day2-icon"></span></p>
+                    <p>Temp:<span id="day2-temp"></span></p>
+                    <p>Wind:<span id="day2-wind"></span></p>
+                    <p>Humidity:<span id="day2-humidity"></span></p>
+                </div>
+                <div class="card">
+                    <p class="date" id="day3"></p>
+                    <p><span id="day3-icon"></span></p>
+                    <p>Temp:<span id="day3-temp"></span></p>
+                    <p>Wind:<span id="day3-wind"></span></p>
+                    <p>Humidity:<span id="day3-humidity"></span></p>
+                </div>
+                <div class="card">
+                    <p class="date" id="day4"></p>
+                    <p><span id="day4-icon"></span></p>
+                    <p>Temp:<span id="day4-temp"></span></p>
+                    <p>Wind:<span id="day4-wind"></span></p>
+                    <p>Humidity:<span id="day4-humidity"></span></p>
+                </div>
+                <div class="card">
+                    <p class="date" id="day5"></p>
+                    <p><span id="day5-icon"></span></p>
+                    <p>Temp:<span id="day5-temp"></span></p>
+                    <p>Wind:<span id="day5-wind"></span></p>
+                    <p>Humidity:<span id="day5-humidity"></span></p>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <h3>5-Day Forecast:</h3>
-
-    <div class="five-day">
-        <div class="card">
-            <p class="date" id="day1"></p>
-            <p><span id="day1-icon"></span></p>
-            <p>Temp:<span id="day1-temp"></span></p>
-            <p>Wind:<span id="day1-wind"></span></p>
-            <p>Humidity:<span id="day1-humidity"></span></p>
-        </div>
-        <div class="card">
-            <p class="date" id="day2"></p>
-            <p><span id="day2-icon"></span></p>
-            <p>Temp:<span id="day2-temp"></span></p>
-            <p>Wind:<span id="day2-wind"></span></p>
-            <p>Humidity:<span id="day2-humidity"></span></p>
-        </div>
-        <div class="card">
-            <p class="date" id="day3"></p>
-            <p><span id="day3-icon"></span></p>
-            <p>Temp:<span id="day3-temp"></span></p>
-            <p>Wind:<span id="day3-wind"></span></p>
-            <p>Humidity:<span id="day3-humidity"></span></p>
-        </div>
-        <div class="card">
-            <p class="date" id="day4"></p>
-            <p><span id="day4-icon"></span></p>
-            <p>Temp:<span id="day4-temp"></span></p>
-            <p>Wind:<span id="day4-wind"></span></p>
-            <p>Humidity:<span id="day4-humidity"></span></p>
-        </div>
-        <div class="card">
-            <p class="date" id="day5"></p>
-            <p><span id="day5-icon"></span></p>
-            <p>Temp:<span id="day5-temp"></span></p>
-            <p>Wind:<span id="day5-wind"></span></p>
-            <p>Humidity:<span id="day5-humidity"></span></p>
-        </div>
-    </div>
-
-    
-
 
     <script
       src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
