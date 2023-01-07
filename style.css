@@ -138,3 +138,10 @@ img {
     width: 65px;
     height: 65px;
 }
+
+footer {
+    position:fixed;
+    bottom: 1%;
+    text-align: center;
+    width:100%;
+ }
