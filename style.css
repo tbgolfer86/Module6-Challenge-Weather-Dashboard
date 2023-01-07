@@ -15,20 +15,16 @@ h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-h2 {
-    font-size: 22px;
-}
-
-h3 {
-    font-size: 18px;
-    margin-left: 27%;
-    margin-bottom: 6px;
-}
-
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.page-layout {
+    display: flex;
+    flex-direction: row;
+}
+
+/* search form and past searched city buttons on left side of page */
 .left-side {
     display: flex;
     flex-direction: column;
@@ -61,10 +57,6 @@ body {
     font-size: 22px;   
 }
 
-#todays-date {
-    padding-left: 10px;
-}
-
 .button {
     height: 30px;
     background-color: rgb(75, 75, 232);
@@ -78,34 +70,44 @@ body {
     background-color: rgb(52, 52, 154);
 }
 
+/* weather section on right side of page */
+.right-side {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
 .main-card {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    height: 150px;
     border-style: solid;
     border-color: rgb(210, 210, 210);
-    /* width: 70%;
-    height: 150px;
-    margin-left: 27%;
-    margin-top: -161px;
-    margin-bottom: 10px; */
     padding-left: 5px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+#todays-date {
+    padding-left: 10px;
 }
 
 .five-day {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* height: 136px;
-    width: 71%;
-    margin-left: 27%; */
 }
 
 .card {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 195px;
+    height: 200px;
     width: 18%;
     background-color: rgb(30, 30, 66);
     color: white;
@@ -115,21 +117,12 @@ body {
     border-color: rgb(9, 133, 216);
 }
 
+h3 {
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 .date {
     font-size: 18px;
-}
-
-
-
-.weather-section {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin-left: 2%;
-    margin-right: 2%;
-}
-
-.page-layout {
-    display: flex;
-    flex-direction: row;
 }
