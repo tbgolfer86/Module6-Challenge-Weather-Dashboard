@@ -119,13 +119,10 @@ function renderSearchButtons() {
   document.getElementById('searched-cities').innerHTML = '';
   
   for (let i = 0; i < searchedCity.length; i++) { 
-    var newSearch = document.createElement('li');
     var newSearchButton = document.createElement('button');
     newSearchButton.textContent = searchedCity[i];
     newSearchButton.classList.add('button');
-    newSearch.classList.add('button');
-    newSearch.appendChild(newSearchButton);
-    document.getElementById('searched-cities').appendChild(newSearch)
+    document.getElementById('searched-cities').appendChild(newSearchButton)
   }
 }
 
