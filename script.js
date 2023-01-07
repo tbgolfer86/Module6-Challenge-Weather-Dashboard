@@ -106,6 +106,7 @@ function handleSearchFormSubmit(event) {
   event.preventDefault();
 
   getWeatherData();
+  renderSearchButtons();
 }
 searchFormEl.addEventListener('submit', handleSearchFormSubmit);
 
@@ -113,13 +114,13 @@ searchFormEl.addEventListener('submit', handleSearchFormSubmit);
 function renderSearchButtons() {
   
   for (let i = 0; i < searchedCity.length; i++) { 
-    var node = document.createElement('li');
+    var search = document.createElement('li');
     var newButton = document.createElement('button');
-    node.appendChild(newButton);
-    document.getElementById('searched-cities').appendChild(node)
+    search.appendChild(newButton);
+    document.getElementById('searched-cities').appendChild(search)
   }
 }
-renderSearchButtons();
+
 
   
   
