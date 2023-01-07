@@ -29,13 +29,13 @@ body {
     display: flex;
     flex-direction: column;
     width: 30%;
+    margin-left: 2%;
 }
 
 .search-box {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin-left: 2%;
     margin-bottom: 10px;
     padding-bottom: 20px; 
     border-bottom-style: solid;
@@ -65,7 +65,6 @@ body {
     border-radius: 5px;
     font-weight: bold;
     margin-top: 10px;
-    margin-left: 2%;
 }
 
 .button:hover {
