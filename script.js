@@ -69,7 +69,6 @@ function getWeatherData() {
     return response.json(); 
   })
   .then(function(cityWeather) {
-    weather = JSON.stringify(cityWeather);
     searchedCity.push(cityWeather.city.name);
     localStorage.setItem('city', JSON.stringify(searchedCity));
     renderSearchButtons();
