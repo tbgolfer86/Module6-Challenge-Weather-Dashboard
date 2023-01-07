@@ -39,7 +39,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin-left: 10px;
+    margin-left: 2%;
     margin-bottom: 10px;
     padding-bottom: 20px; 
     border-bottom-style: solid;
