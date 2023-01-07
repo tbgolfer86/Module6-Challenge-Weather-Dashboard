@@ -116,14 +116,16 @@ function handleSearchFormSubmit(event) {
 searchFormEl.addEventListener('submit', handleSearchFormSubmit);
 
 function renderSearchButtons() {
-  document.getElementById('searched-cities').innerHTML = 'Searched city';
+  document.getElementById('searched-cities').innerHTML = '';
   
   for (let i = 0; i < searchedCity.length; i++) { 
-    var search = document.createElement('li');
-    var newButton = document.createElement('button');
-    newButton.textContent = searchedCity[i];
-    search.appendChild(newButton);
-    document.getElementById('searched-cities').appendChild(search)
+    var newSearch = document.createElement('li');
+    var newSearchButton = document.createElement('button');
+    newSearchButton.textContent = searchedCity[i];
+    newSearchButton.classList.add('button');
+    newSearch.classList.add('button');
+    newSearch.appendChild(newSearchButton);
+    document.getElementById('searched-cities').appendChild(newSearch)
   }
 }
 

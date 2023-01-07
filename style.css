@@ -57,13 +57,28 @@ body {
     font-size: 22px;   
 }
 
+.form-button {
+    height: 30px;
+    background-color: rgb(75, 75, 232);
+    border-style: none;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.form-button:hover {
+    background-color: rgb(52, 52, 154);
+}
+
 .button {
     height: 30px;
     background-color: rgb(75, 75, 232);
     border-style: none;
     color: white;
     border-radius: 5px;
-    font-weight: bold;  
+    font-weight: bold;
+    text-align: center;
+    list-style: none;
 }
 
 .button:hover {
