@@ -24,45 +24,45 @@
     </ul>
 
     <div class="main-card">
-        <h2>City Name Here</h2>
-        <p>Temp:</p>
-        <p>Wind:</p>
-        <p>Humidity:</p>
+        <h2><span id="city-name"></span><span id="todays-date"></span></h2>
+        <p>Temp:<span id="current-day-temp"></span></p>
+        <p>Wind:<span id="current-day-wind"></span></p>
+        <p>Humidity:<span id="current-day-humidity"></span></p>
     </div>
 
     <h3>5-Day Forecast:</h3>
 
     <div class="five-day">
         <div class="card">
-            <p class="date">Date here</p>
+            <p class="date" id="day1"></p>
             <p>image</p>
             <p>Temp:</p>
             <p>Wind:</p>
             <p>Humidity:</p>
         </div>
         <div class="card">
-            <p class="date">Date here</p>
+            <p class="date" id="day2"></p>
             <p>image</p>
             <p>Temp:</p>
             <p>Wind:</p>
             <p>Humidity:</p>
         </div>
         <div class="card">
-            <p class="date">Date here</p>
+            <p class="date" id="day3"></p>
             <p>image</p>
             <p>Temp:</p>
             <p>Wind:</p>
             <p>Humidity:</p>
         </div>
         <div class="card">
-            <p class="date">Date here</p>
+            <p class="date" id="day4"></p>
             <p>image</p>
             <p>Temp:</p>
             <p>Wind:</p>
             <p>Humidity:</p>
         </div>
         <div class="card">
-            <p class="date">Date here</p>
+            <p class="date" id="day5"></p>
             <p>image</p>
             <p>Temp:</p>
             <p>Wind:</p>
@@ -73,7 +73,11 @@
     
 
 
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
 </body>
 </html>

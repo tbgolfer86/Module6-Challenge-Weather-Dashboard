@@ -57,6 +57,10 @@ body {
     font-size: 22px;   
 }
 
+#todays-date {
+    padding-left: 10px;
+}
+
 .button {
     height: 30px;
     background-color: rgb(75, 75, 232);
