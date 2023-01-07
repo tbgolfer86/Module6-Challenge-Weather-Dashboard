@@ -1,6 +1,12 @@
 var APIKey = '3ca32555d29dc021fe4de0856010f8ea';
 var searchFormEl = document.getElementById('search-box');
-var searchedCity = [];
+var searchedCity = localStorage.getItem('city');
+
+if (!searchedCity) {
+  searchedCity = [];
+} else {
+  searchedCity = JSON.parse(searchedCity);
+}
 
 var cityName = document.getElementById('city-name');
 var todaysDate = document.getElementById('todays-date');
@@ -64,8 +70,9 @@ function getWeatherData() {
   })
   .then(function(cityWeather) {
     weather = JSON.stringify(cityWeather);
-    searchedCity.push(weather);
-    localStorage.setItem('city', searchedCity);
+    searchedCity.push(cityWeather.city.name);
+    localStorage.setItem('city', JSON.stringify(searchedCity));
+    renderSearchButtons();
     
     cityName.textContent = " " + cityWeather.city.name;
     todaysTemp.textContent = " " + cityWeather.list[0].main.temp + " °F";
@@ -106,21 +113,23 @@ function handleSearchFormSubmit(event) {
   event.preventDefault();
 
   getWeatherData();
-  renderSearchButtons();
 }
 searchFormEl.addEventListener('submit', handleSearchFormSubmit);
 
 
 function renderSearchButtons() {
+  document.getElementById('searched-cities').innerHTML = 'Searched city';
   
   for (let i = 0; i < searchedCity.length; i++) { 
     var search = document.createElement('li');
     var newButton = document.createElement('button');
+    newButton.textContent = searchedCity[i];
     search.appendChild(newButton);
     document.getElementById('searched-cities').appendChild(search)
   }
 }
 
+renderSearchButtons();
 
   
   
