@@ -52,6 +52,7 @@ if (!searchedCity) {
   searchedCity = JSON.parse(searchedCity);
 }
 
+
 function handleSearchFormSubmit(event) {
   event.preventDefault();
   var city = document.getElementById('city').value;
@@ -61,6 +62,7 @@ function handleSearchFormSubmit(event) {
   getWeatherData(city);
 } 
 searchFormEl.addEventListener('submit', handleSearchFormSubmit);
+
 
 function getWeatherData(city) {
   var latLongURL = 'http://api.openweathermap.org/geo/1.0/direct?q=' + city + '&appid=' + APIKey;
@@ -120,6 +122,7 @@ function getWeatherData(city) {
     console.log(cityWeather.city.name)
   })
 }
+
 
 function renderSearchButtons() {
   document.getElementById('searched-cities').innerHTML = '';
