@@ -122,6 +122,9 @@ function renderSearchButtons() {
     var newSearchButton = document.createElement('button');
     newSearchButton.textContent = searchedCity[i];
     newSearchButton.classList.add('button');
+    newSearchButton.addEventListener("click", function(){
+      
+    });
     document.getElementById('searched-cities').appendChild(newSearchButton)
   }
 }
