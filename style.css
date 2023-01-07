@@ -133,3 +133,8 @@ h3 {
 .date {
     font-size: 18px;
 }
+
+img {
+    width: 65px;
+    height: 65px;
+}
