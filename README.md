@@ -13,5 +13,5 @@ This app runs in the browser. The user can search for a city using the form on t
 https://tbgolfer86.github.io/Module6-Challenge-Weather-Dashboard/
 
 The screenshot below shows it open.
-![alt text](Screenshot%202023-01-07%20at%208.03.04%20PM.png)
+![alt text](Screenshot%202023-01-07%20at%209.10.25%20PM.png)
 
