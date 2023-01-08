@@ -58,11 +58,25 @@ body {
     font-size: 22px;   
 }
 
-.button {
+.search-button {
     height: 30px;
+    color: white;
     background-color: rgb(75, 75, 232);
     border-style: none;
-    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.search-button:hover {
+    background-color: rgb(52, 52, 154);
+}
+
+.button {
+    height: 30px;
+    color: black;
+    background-color: rgb(152, 152, 158);
+    border-style: none;
     border-radius: 5px;
     font-weight: bold;
     margin-top: 10px;
