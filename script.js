@@ -58,7 +58,7 @@ searchFormEl.addEventListener('submit', handleSearchFormSubmit);
 
 //retrieves OpenWeatherAPI data
 function getWeatherData(city) {
-  var latLongURL = 'http://api.openweathermap.org/geo/1.0/direct?q=' + city + '&appid=' + APIKey;
+  var latLongURL = 'https://api.openweathermap.org/geo/1.0/direct?q=' + city + '&appid=' + APIKey;
 
   fetch(latLongURL)
   .then(function (response) {
@@ -86,27 +86,27 @@ function getWeatherData(city) {
     todaysWind.textContent = " " + cityWeather.list[0].wind.speed + " MPH";
     todaysHumidity.textContent = " " + cityWeather.list[0].main.humidity + " %";
 
-    day1icon.src = 'http://openweathermap.org/img/wn/' + cityWeather.list[7].weather[0].icon + '@2x.png';
+    day1icon.src = 'https://openweathermap.org/img/wn/' + cityWeather.list[7].weather[0].icon + '@2x.png';
     day1Temp.textContent = " " + cityWeather.list[7].main.temp + " °F";
     day1Wind.textContent = " " + cityWeather.list[7].wind.speed + " MPH";
     day1Humidity.textContent = " " + cityWeather.list[7].main.humidity + " %";
 
-    day2icon.src = 'http://openweathermap.org/img/wn/' + cityWeather.list[15].weather[0].icon + '@2x.png';
+    day2icon.src = 'https://openweathermap.org/img/wn/' + cityWeather.list[15].weather[0].icon + '@2x.png';
     day2Temp.textContent = " " + cityWeather.list[15].main.temp + " °F";
     day2Wind.textContent = " " + cityWeather.list[15].wind.speed + " MPH";
     day2Humidity.textContent = " " + cityWeather.list[15].main.humidity + " %";
 
-    day3icon.src = 'http://openweathermap.org/img/wn/' + cityWeather.list[23].weather[0].icon + '@2x.png';
+    day3icon.src = 'https://openweathermap.org/img/wn/' + cityWeather.list[23].weather[0].icon + '@2x.png';
     day3Temp.textContent = " " + cityWeather.list[23].main.temp + " °F";
     day3Wind.textContent = " " + cityWeather.list[23].wind.speed + " MPH";
     day3Humidity.textContent = " " + cityWeather.list[23].main.humidity + " %";
 
-    day4icon.src = 'http://openweathermap.org/img/wn/' + cityWeather.list[31].weather[0].icon + '@2x.png';
+    day4icon.src = 'https://openweathermap.org/img/wn/' + cityWeather.list[31].weather[0].icon + '@2x.png';
     day4Temp.textContent = " " + cityWeather.list[31].main.temp + " °F";
     day4Wind.textContent = " " + cityWeather.list[31].wind.speed + " MPH";
     day4Humidity.textContent = " " + cityWeather.list[31].main.humidity + " %";
 
-    day5icon.src = 'http://openweathermap.org/img/wn/' + cityWeather.list[39].weather[0].icon + '@2x.png';
+    day5icon.src = 'https://openweathermap.org/img/wn/' + cityWeather.list[39].weather[0].icon + '@2x.png';
     day5Temp.textContent = " " + cityWeather.list[39].main.temp + " °F";
     day5Wind.textContent = " " + cityWeather.list[39].wind.speed + " MPH";
     day5Humidity.textContent = " " + cityWeather.list[39].main.humidity + " %";
