@@ -104,6 +104,12 @@ h2 {
     padding-left: 10px;
 }
 
+h3 {
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 .five-day {
     display: flex;
     flex-direction: row;
@@ -122,12 +128,6 @@ h2 {
     font-size: 12px;
     border-style: solid;
     border-color: rgb(9, 133, 216);
-}
-
-h3 {
-    font-size: 18px;
-    margin-top: 5px;
-    margin-bottom: 5px;
 }
 
 .date {
