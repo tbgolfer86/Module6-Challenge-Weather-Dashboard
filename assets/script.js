@@ -4,6 +4,7 @@ var searchFormEl = document.getElementById('search-box');
 //main weather card IDs
 var cityName = document.getElementById('city-name');
 var todaysDate = document.getElementById('todays-date');
+var todaysIcon = document.getElementById('current-day-icon');
 var todaysTemp = document.getElementById('current-day-temp'); 
 var todaysWind = document.getElementById('current-day-wind');
 var todaysHumidity = document.getElementById('current-day-humidity');
@@ -82,6 +83,7 @@ function getWeatherData(city) {
     
     //puts OpenWeatherAPI data on page
     cityName.textContent = " " + cityWeather.city.name;
+    todaysIcon.src = 'https://openweathermap.org/img/wn/' + cityWeather.list[0].weather[0].icon + '@2x.png';
     todaysTemp.textContent = " " + cityWeather.list[0].main.temp + " °F";
     todaysWind.textContent = " " + cityWeather.list[0].wind.speed + " MPH";
     todaysHumidity.textContent = " " + cityWeather.list[0].main.humidity + " %";

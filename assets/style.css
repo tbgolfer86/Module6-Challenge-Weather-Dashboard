@@ -96,6 +96,7 @@ body {
 .right-side {
     display: flex;
     flex-direction: column;
+    height: 75vh;
     width: 80%;
     margin-left: 2%;
     margin-right: 2%;
@@ -105,7 +106,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 150px;
+    height: 200px;
     border-style: solid;
     border-color: rgb(210, 210, 210);
     padding-left: 5px;
