@@ -13,5 +13,5 @@ This app runs in the browser. The user can search for a city using the form on t
 https://tbgolfer86.github.io/Weather-Dashboard/
 
 The screenshot below shows it open.
-![alt text](Screenshot%202023-01-07%20at%209.10.25%20PM.png)
+![alt text](assets/Screenshot%202023-01-07%20at%209.10.25%20PM.png)
 
