@@ -200,5 +200,8 @@ footer {
         border-radius: 15px;
         padding: 2%;
     }
+    footer {
+        padding-bottom: 5%;
+    }
 }
 
