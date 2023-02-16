@@ -188,6 +188,7 @@ footer {
 @media screen and (max-width: 475px) {
     .five-day {
         flex-direction: column;
+        align-items: center;
     }
     .main-card {
         border-radius: 15px;
