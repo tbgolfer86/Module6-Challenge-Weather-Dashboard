@@ -9,7 +9,7 @@ header {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 3em;
     color: white;
     text-align: right;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -17,12 +17,14 @@ h1 {
 }
 
 body {
+    min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .page-layout {
     display: flex;
     flex-direction: row;
+    min-height: 100vh;
 }
 
 /* search form and past searched city buttons on left side of page */
@@ -156,8 +158,41 @@ img {
 }
 
 footer {
-    position:fixed;
-    bottom: 1%;
     text-align: center;
     width:100%;
  }
+
+
+
+
+
+
+ /************ media queries ************/
+@media screen and (max-width: 992px) {
+   
+}
+
+@media screen and (max-width: 820px) {
+    .page-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+    .left-side {
+        width: 60%;
+        margin-bottom: 2%;
+    }
+    .right-side {
+        height: 100vh;
+        width: 96%;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .five-day {
+        flex-direction: column;
+    }
+    .card {
+        width: 98%;
+    }
+}
+
