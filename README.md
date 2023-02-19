@@ -26,7 +26,7 @@
   https://tbgolfer86.github.io/Weather-Dashboard/
 
   The screenshot below shows it open.
-  ![alt text](./assets/images/Screenshot%202023-01-18%20at%203.26.04%20PM.png)
+  ![alt text](./assets/images/Screenshot%202023-02-18%20at%207.29.19%20PM.png)
 
 ---
 
